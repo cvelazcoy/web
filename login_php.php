@@ -16,10 +16,8 @@ session_start();  // démarrage d'une session
 
 $post_string = implode(",", $_POST);
 $listPOST = explode(",",$post_string);
-replaceArrayKey($listPOST, '0', 'USER_USERNAME');
-replaceArrayKey($listPOST, '1', 'PASSWORD');
 
-print_r($listPOST);
+//print_r($listPOST);
 
 // on vérifie que les données du formulaire sont présentes
 if (isset($_POST['Matricule']) && isset($_POST['MdP'])) {
@@ -28,18 +26,18 @@ if (isset($_POST['Matricule']) && isset($_POST['MdP'])) {
         foreach ($listPOST as $k => $v) {
             
             if (!empty($v)) {
-                $queryCases = ["USER_USERNAME","PASSWORD"];
+                $queryCases = ["0","1"];
                 if (in_array($k, $queryCases)) {
                     $queryCondition .= empty($queryCondition) ? " WHERE " : " AND ";
                 }
                 switch ($k) {
-                    case "USER_USERNAME":
+                    case "0":
                         $name = $v;
                         $queryCondition .= "USER_USERNAME = ? ";
                         $paramType .= "s"; // 's' for string
                         $paramValue[] = $v  ; // Partial match
                         break;
-                    case "PASSWORD":
+                    case "1":
                         $code = $v;
                         $queryCondition .= "USER_USERNAME = ? ";
                         $paramType .= "s";
@@ -51,18 +49,18 @@ if (isset($_POST['Matricule']) && isset($_POST['MdP'])) {
     }
 
     // cette requête permet de récupérer l'utilisateur depuis la BD
-    $query = "SELECT * FROM bt_bd.user_acti where ". $queryCondition;
+    $query = "SELECT * FROM bt_bd.user_acti ". $queryCondition;
 
-    echo($query);
+    //echo($query);
 
     $login = $_POST['Matricule'];
     $mdp = $_POST['MdP'];
 
     $result = $database->select($query, $paramType, $paramValue);
 
-    echo($result);
+    //printf($result);
 
-    if ($result->rowCount() == 1) {
+    if (! empty($result)) {
         // l'utilisateur existe dans la table
         // on ajoute ses infos en tant que variables de session
         $_SESSION['Matricule'] = $login;
@@ -78,20 +76,7 @@ function escape($valeur)
     return htmlspecialchars($valeur, ENT_QUOTES, 'UTF-8', false);
 }
 
-function replaceArrayKey($array, $oldKey, $newKey){
-    //If the old key doesn't exist, we can't replace it...
-    if(!isset($array[$oldKey])){
-        return $array;
-    }
-    //Get a list of all keys in the array.
-    $arrayKeys = array_keys($array);
-    //Replace the key in our $arrayKeys array.
-    $oldKeyIndex = array_search($oldKey, $arrayKeys);
-    $arrayKeys[$oldKeyIndex] = $newKey;
-    //Combine them back into one array.
-    $newArray =  array_combine($arrayKeys, $array);
-    return $newArray;
-}
+
 
 ?>
 
