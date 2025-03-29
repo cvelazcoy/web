@@ -39,11 +39,11 @@ session_start();
         <div class="list-group">
           <div class="lg">
             <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
-              <h5 class="mb-1">Real Estate Marketing Automation: 6 Simple Systems</h5>
+              <h5 class="mb-1">Message 1s</h5>
               <p class="mb-0">17 October 2016 | 9:32 pm</p>
             </a>
             <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
-              <h5 class="mb-1">How to Generate Seller Leads For $0.88 Using...</h5>
+              <h5 class="mb-1">Message 1</h5>
               <p class="mb-0">3 October 2016 | 9:58 pm</p>
             </a>
           </div> <!-- /.lg -->
@@ -173,7 +173,7 @@ session_start();
   <div class="sidebar">
   <ul class="list-group flex-column d-inline-block first-menu">
     <li class="list-group-item pl-3 py-2">
-      <a href="#"><i class="fa fa-user-o" aria-hidden="true"><span class="ml-2 align-middle">BT</span></i></a>
+      <a href="#"><i class="fa fa-paper-plane-o" aria-hidden="true"><span class="ml-2 align-middle">BT</span></i></a>
       
       <ul class="list-group flex-column d-inline-block submenu">
         <li class="list-group-item pl-4">
