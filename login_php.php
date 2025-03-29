@@ -58,13 +58,14 @@ if (isset($_POST['Matricule']) && isset($_POST['MdP'])) {
 
     $result = $database->select($query, $paramType, $paramValue);
 
-    //printf($result);
+    //print_r($result);
 
     if (! empty($result)) {
         // l'utilisateur existe dans la table
         // on ajoute ses infos en tant que variables de session
         $_SESSION['Matricule'] = $login;
         $_SESSION['MdP'] = $mdp;
+        $_SESSION['USER_EMAIL'] = $result[0]['USER_EMAIL'];
         // cette variable indique que l'authentification a réussi
         $authOK = true;
     }
@@ -77,7 +78,7 @@ function escape($valeur)
 }
 
 if($authOK) {
-	header("Location: indexfd.html");
+	header("Location: navCondor.php");
     exit;
 } else {
     header("Location: login-form-5.html");

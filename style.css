@@ -345,14 +345,14 @@ button:focus, a:focus {
   display: none;
 }
 [data-component=navbar] .navbar-toggler[aria-expanded=true] {
-  color: #009fff;
+  color: #001D47;
 }
 [data-component=navbar] .navbar-toggler[aria-expanded=true] span {
   display: initial;
-  color: #009fff;
+  color: #001D47;
 }
 [data-component=navbar] .navbar-toggler[aria-expanded=true] i {
-  color: #009fff;
+  color: #001D47;
 }
 [data-component=navbar] .navbar-collapse {
   background-color: #292a2c;
@@ -367,7 +367,7 @@ button:focus, a:focus {
   transition: height 0.3s ease;
 }
 [data-component=navbar] .navbar-brand {
-  background-color: #009fff;
+  background-color: white;
   height: 60px;
   width: 75px;
   text-align: center;
@@ -469,7 +469,7 @@ button:focus, a:focus {
   border-radius: 0;
 }
 [data-component=navbar] .megamenu [aria-expanded=false] i {
-  color: #009fff;
+  color: #001D47;
   font-size: 1.25em;
 }
 [data-component=navbar] .megamenu .list-group {
@@ -483,7 +483,7 @@ button:focus, a:focus {
   color: #fff;
 }
 [data-component=navbar] .megamenu .list-group-item:hover {
-  background-color: #009fff;
+  background-color: #001D47;
 }
 
 [data-component=sidebar] .sidebar {
@@ -520,7 +520,7 @@ button:focus, a:focus {
   border-radius: 0;
 }
 [data-component=sidebar] .first-menu .list-group-item:hover {
-  background-color: #009fff;
+  background-color: #001D47;
 }
 [data-component=sidebar] .first-menu:hover {
   width: 160px;
@@ -533,7 +533,7 @@ button:focus, a:focus {
   left: 160px;
   width: 195px;
   top: 60px;
-  background-color: #009fff;
+  background-color: #001D47;
   height: 100vw;
   opacity: 0;
   visibility: hidden;
@@ -558,7 +558,7 @@ button:focus, a:focus {
   transition: 600ms opacity 600ms, 600ms visibility 600ms;
 }
 [data-component=sidebar] .sub-submenu a {
-  color: #009fff;
+  color: #001D47;
 }
 [data-component=sidebar] .sub-submenu .list-group-item:hover {
   background-color: transparent;

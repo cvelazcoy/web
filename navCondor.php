@@ -1,3 +1,7 @@
+<?php 
+session_start(); 
+?>
+
 <!DOCTYPE html>
 <html lang="en" >
 <head>
@@ -19,6 +23,7 @@
   <div><a class="navbar-brand px-1" href="#"><img src="img\air_france_logo.svg" class="d-inline-block mt-1" alt="Air France Logo" height="50"></a>
 
   <div class="right-links float-right mr-4">
+  <?php echo($_SESSION['USER_EMAIL']); ?>
     <a href="#" class="home"><i class="fa fa-home mr-3"></i></a>
     
     <div class="d-inline dropdown rounded-0 mx-3">
@@ -187,7 +192,7 @@
         </li> 
         
         <li class="list-group-item pl-4">
-          <a href="#">Atlas</a>
+          <a href="001_frm_workpackBT/001_frm_workpackBT.php" target="iframeCondor">Atlas</a>
           
           <ul class="list-group flex-column d-inline-block sub-submenu">
             <span class="arrow" style="top:113px;"></span>
