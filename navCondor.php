@@ -197,31 +197,10 @@ session_start();
           <ul class="list-group flex-column d-inline-block sub-submenu">
             <span class="arrow" style="top:113px;"></span>
             <li class="list-group-item pl-4">
-              <a href="#">Dashboard</a>
+              <a href="Test_php.html"  target="iframeCondor">Dashboard</a>
             </li>
-            <li class="list-group-item pl-4">
-              <a href="#">Titles & Metas</a>
-            </li>
-            <li class="list-group-item pl-4">
-              <a href="#">Social</a>
-            </li>
-            <li class="list-group-item pl-4">
-              <a href="#">XML Sitemaps</a>
-            </li>
-            <li class="list-group-item pl-4">
-              <a href="#">Advanced</a>
-            </li>
-            <li class="list-group-item pl-4">
-              <a href="#">Tools</a>
-            </li>
-            <li class="list-group-item pl-4">
-              <a href="#">Search Console</a>
-            </li>
-            <li class="list-group-item pl-4">
-              <a href="#">Go Premium</a>
-            </li>
-            <li class="list-group-item pl-4">
-              <a href="#">Manual</a>
+			<li class="list-group-item pl-4">
+              <a href="http://localhost:8080"  target="iframeCondor">Apache2</a>
             </li>
           </ul>
         
@@ -688,7 +667,7 @@ session_start();
 <div class="wp-content">
   <div class="container-fluid" style="padding-right: 0px;padding-left: 0px;">
     <!-- CONTENT GOES HERE -->
-	<iframe name="iframeCondor" src="img/air_france_logo.svg" style="position: fixed; width: 100%;height: 100%;"> </iframe>
+	<iframe name="iframeCondor" src="img/air_france_logo.svg" style="position: fixed; width: 95%;height: 100%;"> </iframe>
   </div>
 </div>
 <!-- partial -->
