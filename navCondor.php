@@ -64,8 +64,8 @@ session_start();
         <img src="http://1.gravatar.com/avatar/47db31bd2e0b161008607d84c74305b5?s=96&d=mm&r=g">
       </a>
       <div class="dropdown-menu dropdown-menu-right rounded-0" aria-labelledby="messages">
-        <a class="dropdown-item" href="#">Edit my profile</a>
-        <a class="dropdown-item" href="#">Log Out</a>
+        <!--<a class="dropdown-item" href="#">Edit my profile</a>-->
+        <a class="dropdown-item" href="deconnection_php.php">Se déconnecter</a>
       </div> <!-- /.dropdown-menu -->
     </div> <!-- /.dropdown -->
     
